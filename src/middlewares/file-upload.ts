@@ -8,14 +8,14 @@ const uploadDir = path.join('/Users/salvatoredininni/Documents/GitHub/meme-edito
 const storage = multer.diskStorage({
   destination: function (
     req: Request, 
-    file: multer.File, 
+    file: unknown, 
     cb: (error: Error | null, destination: string) => void
     ) {
     cb(null, uploadDir)
   },
   filename: function (
     req: Request, 
-    file: multer.File
+    file: unknown
     , 
     cb: (error: Error | null, destination: string) => void
     ) {

@@ -6,8 +6,8 @@ import fs from 'fs'
 
 const app = express();
 const port = 8000;
-const uploadPath = path.join(__dirname, 'uploads')
 app.use(cors())
+const uploadPath = path.join(__dirname, 'uploads')
 app.use("/uploads", express.static(uploadPath))
 
 app.get('/videos', (req: Request, res: Response) => {
